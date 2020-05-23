@@ -16,8 +16,9 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 
-// mongoose.connect("mongodb://localhost:27017/blogDB", {useNewUrlParser: true});
-mongoose.connect(process.env.MONGODB_URI || process.env.MONGOHQ_URL || process.env.MONGOLAB_URI || 'mongodb://localhost/blogDB');
+mongoose.connect("mongodb+srv:haseeb_khan:<1969hskhsk>@dentalcluster-sdul0.mongodb.net/test?retryWrites=true&w=majority", {useNewUrlParser: true});
+
+
 const postSchema = {
   title: String,
   content: String
